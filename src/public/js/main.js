@@ -38,7 +38,7 @@ $(function () {
     socket.on('usernames', data => {
         let html='';
         for (let index = 0; index < data.length; index++) {
-            html += `<p><i class="fas fa-user">${data[index]}</p>`
+            html += `<p><i class="fas fa-user"></i>${data[index]}</p>`
         }
         usuarios.html(html);
     })

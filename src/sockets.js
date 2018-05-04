@@ -18,7 +18,7 @@ module.exports = function (io) {
         });
 
         socket.on('disconnect',data=>{
-            if (socket.nickname) 
+            if (!socket.nickname) 
             return;
             nicknames.splice(nicknames.indexOf(socket.nickname),1);
             updateNicknames();
