@@ -8,6 +8,11 @@
     <!--Bootstrap-->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
         crossorigin="anonymous">
+    <!--FontAwesome-->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.12/css/all.css" integrity="sha384-G0fIWCsCzJIMAVNQPfjH08cyYaUtMwjJwqiRKxxE/rx96Uroj1BtIQ6MLJuheaO9"
+        crossorigin="anonymous">
+
+
 
     <!--Custom styles-->
     <link rel="stylesheet" type="text/css" media="screen" href="/css/main.css" />
@@ -17,21 +22,53 @@
     <nav class="navbar navbar-light bg-warning">
         <a class="navbar-brand mx-auto" href="/">CHAT</a>
     </nav>
-    <div class="container">
-        <div class="col-md-6 mt-4">
-            <div class="card">
-                <div class="card-header">
-                    <h4>Chatear</h4>
-                </div>
-                <div id="chat" class="card-body"></div>
-                <form id="message-form" class="card-footer">
-                    <div class="input-group">
-                        <input type="text" id="message" class="form-control">
-                        <div class="input-group-append"></div>
-                        <input type="submit" class="btn btn-warning">
-                    </div>
 
-                </form>
+    <div class="card col-md-4 mt-5 mx-auto" id="nickWrap">
+        <div class="card-header">
+            <h3>Ingrese su usuario: </h3>
+        </div>
+        <p id="nickError"></p>
+        <div class="card-body">
+            <form id="nickForm">
+                <input type="text" id="nickname" class="form-control">
+                <button type="submit" class="btn btn-warning mt-2">
+                    <i class="fas fa-location-arrow"></i>
+                    Enviar
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div class="container" id="contentWrap">
+        <div class="row">
+            <div class="col-md-6 mt-4">
+                <div class="card col-md-3">
+                    <div class="card-header">
+                        <h3>Usernames</h3>
+                    </div>
+                    <div class="card-body">
+                        <div id="usernames"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mt-4">
+                <div class="card">
+                    <div class="card-header">
+                        <h4>Chatear</h4>
+                    </div>
+                    <div id="chat" class="card-body"></div>
+                    <form id="message-form" class="card-footer">
+                        <div class="input-group">
+                            <input type="text" id="message" class="form-control">
+                            <div class="input-group-append"></div>
+                            <button type="submit" class="btn btn-warning">
+                                Enviar
+                                <i class="fas fa-location-arrow"></i>
+                            </button>
+                        </div>
+
+                    </form>
+                </div>
             </div>
         </div>
     </div>
